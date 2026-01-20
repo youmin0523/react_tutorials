@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import UseEffect from './components/UseEffect';
+import UseRef from './components/UseRef';
 // import Viewer from './components/Viewer';
 // import Controller from './components/Controller';
 
@@ -24,7 +25,8 @@ const App = () => {
           <Controller handleSetCount={handleSetCount} />
         </section> */}
 
-        <UseEffect />
+        {/* <UseEffect /> */}
+        <UseRef />
       </div>
     </>
   );
