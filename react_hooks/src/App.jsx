@@ -1,15 +1,33 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import UseEffect from './components/UseEffect';
+// import Viewer from './components/Viewer';
+// import Controller from './components/Controller';
+
 
 const App = () => {
+  // const [count, setCount] = useState(0);
+  // const handleSetCount = (value) => {
+  //   setCount(count + value);
+  // };
 
   return (
     <>
-      <h2 className="text-3xl font-bold underline"> React Hooks </h2>
+      <div>
+        {/* <h1>Counter</h1>
+        <section>
+          <Viewer count={count} />
+        </section>
+        <section>
+          <Controller handleSetCount={handleSetCount} />
+        </section> */}
+
+        <UseEffect />
+      </div>
     </>
   );
-}
+};
 
 export default App;
