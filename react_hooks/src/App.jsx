@@ -3,13 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+const App = () => {
 
   return (
     <>
       <h2 className="text-3xl font-bold underline"> React Hooks </h2>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
