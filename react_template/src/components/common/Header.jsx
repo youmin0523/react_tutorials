@@ -1,17 +1,33 @@
 import React from 'react'
 import {navItems} from '../../constants/data'
+import {Link} from 'react-router-dom'
+import "./header.css"
 
 const Header = () => {
   return (
-    <div>
-        <ul>
-            {
-            navItems.map((item, index) => (
-                <li key={index}>{item.label}</li>
-            ))
-            }
-        </ul>
-    </div>
+    <nav className='sticky top-0 z-50 border-b border-neutral-700/80 backdrop-blur-lg'>
+      <div className='container relative'>
+        <div className='nav-inside-wrapper flex justify-center items-center'>
+          <div className='logo-wrapper flex items-center gap-2'>
+            <div className='logo w-10 h-10 rounded-full border border-neutral-700/90 flex items-center justify-center'>
+              <div className='round-dot w-8 h-8 rounded-full bg-indigo-800'></div>
+            </div>
+            <span className='logo-text text-lg'>AceDot.Dev</span>
+          </div>
+
+          <ul className='nav-wrapper hidden lg: flex gap-3'>
+              {
+              navItems.map((item, index) => (
+                  <li key={index}>{item.label}
+                    { /* 리액트에서는 a 태그를 사용하지 않고, Link 컴포넌트를 사용한다. 경로는 href 대신 to 를 사용한다. */ }
+                    <Link to={item.to}>{item.label}</Link>
+                  </li>
+              ))
+              }
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 }
 
