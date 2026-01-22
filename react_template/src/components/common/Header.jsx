@@ -1,7 +1,8 @@
 import React from 'react'
-import {navItems} from '../../constants/data'
+import {navItems, authLink} from '../../constants/data'
 import {Link} from 'react-router-dom'
 import "./header.css"
+import ModeCtrl from './ModeCtrl'
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
             <span className='logo-text text-lg'>AceDot.Dev</span>
           </div>
 
-          <ul className='nav-wrapper hidden lg: flex gap-3'>
+          <ul className='nav-wrapper hidden lg:flex gap-3'>
               {
               navItems.map((item, index) => (
                   <li key={index}>{item.label}
@@ -25,6 +26,20 @@ const Header = () => {
               ))
               }
           </ul>
+
+          <div className='info-wrapper hidden lg:flex items-center gap-2'>
+            {
+              authLink.map((item, index) => (
+                <Link 
+                key={index}
+                to={item.to}
+                className={`py-2 px-3 rounded-md text-neutral-200 text-xs 
+                          ${index === 1 ? "bg-gradient-to-r from-indigo-500 to-indigo-800 border-0 light: text-neutral-200 " : "border border-neutral-700/80 light:text-neutral-950 dark:text-neutral-200"}`}
+                >{item.label}</Link>
+              ))
+            }
+            <ModeCtrl />
+          </div>
         </div>
       </div>
     </nav>

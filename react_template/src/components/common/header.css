@@ -1,10 +1,10 @@
-nav {
+/* nav {
     position: sticky;
     top: 0;
     border-bottom: 1px solid #efefef;
     z-index: 50;
     background: #212121;
-  }
+  } */
   
   
   nav .container {
@@ -51,10 +51,10 @@ nav {
   }
   
   
-  nav .nav-wrapper {
+  /* nav .nav-wrapper {
     display: flex;
     gap: 12px;
-  }
+  } */
   
   
   nav .nav-wrapper a {
@@ -69,16 +69,16 @@ nav {
   }
   
   
-  nav .info-wrapper a {
+  /* nav .info-wrapper a {
     color: #fff;
     border: 1px solid #efefef;
-    /* padding: 8px 12px; */
-    /* border-radius: 6px; */
+    padding: 8px 12px;
+    border-radius: 6px;
     font-size: 12px;
   
   
     background: linear-gradient(to right, #6366f1 0%, #3730a3 100%);
-  }
+  } */
   
   
   
